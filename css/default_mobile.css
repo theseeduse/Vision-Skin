@@ -1,0 +1,168 @@
+/* 부트스트랩 기본 폰트가 16이라 기본폰트 15인 리버티스킨은 bootstrap 반응형 부분을 쓰기가 힘듬
+   그래서 그냥 px로 때려박는걸로
+*/
+/* Max-width: 1023 데스크탑 마지노선 */
+@media (max-width: 1023px) {
+    .vision .nav-wrapper .navbar {
+        padding: 0.1rem 0.5rem;
+    }
+
+    .vision .nav-wrapper .navbar .form-inline {
+        float: left;
+        padding: 0;
+        padding-bottom: 0.3rem;
+    }
+
+    .vision .nav-wrapper .navbar .form-inline .input-group {
+        display: table;
+        width: 100%;
+    }
+
+    .vision .nav-wrapper .navbar .form-inline .input-group .form-control {
+        width: calc(100% - 41px);
+    }
+
+    .vision .nav-wrapper .navbar .form-inline .input-group .input-group-btn {
+        width: 1%;
+    }
+
+    .vision .content-wrapper {
+        flex-direction: column;
+    }
+
+    .vision .content-wrapper .vision-sidebar {
+        width: 100%;
+        min-width: 100%;
+    }
+
+    .vision .content-wrapper .vision-content {
+        margin-right: auto;
+        max-width: 100%;
+    }
+
+    .vision .content-wrapper .vision-content .vision-content-header .vision-notice {
+        margin: 0.5rem;
+    }
+
+    .vision .content-wrapper .vision-content .vision-content-header .content-tools {
+        float: none;
+        text-align: right;
+        border-bottom: 1px solid var(--border-color);
+        padding: 0.5rem;
+    }
+
+    .vision .content-wrapper .vision-content .vision-content-header .title {
+        padding: 0.5rem 0.5rem 0.1rem;
+    }
+
+    .vision .content-wrapper .vision-content .vision-content-header .contentSub {
+        margin-top: -0.25rem;
+        padding: 0.5rem;
+        padding-top: 0;
+    }
+
+    .vision .content-wrapper .vision-content .vision-content-header .header-ads {
+        margin: 0.5rem;
+        margin-bottom: 0;
+    }
+
+    .vision .content-wrapper .vision-content .vision-content-main {
+        padding: 0.5rem;
+    }
+
+    .vision .content-wrapper .vision-content .vision-content-main #upload-div {
+        display: none;
+    }
+
+    .vision .content-wrapper .vision-content .vision-content-main iframe {
+        width: 80%;
+        height: 30rem;
+    }
+
+    .vision .content-wrapper .vision-content .vision-content-main .mobile-table-wrapper {
+        overflow-x: auto;
+    }
+
+    .vision .content-wrapper .vision-content .bottom-ads {
+        padding: 0.5rem;
+        background-color: #fff;
+        border-left: 1px solid var(--border-color);
+        border-right: 1px solid var(--border-color);
+    }
+
+    .vision .content-wrapper .vision-footer {
+        padding: 0.5rem;
+    }
+}
+
+/* Max-width: 798 메뉴 마지노선 테블릿 모드로 전환 시작하기위한 부분 */
+@media (max-width: 798px) {
+    .vision .nav-wrapper .navbar .navbar-nav .nav-item .fa {
+        text-align: center;
+        margin: 0 0.25rem;
+    }
+
+    .vision .nav-wrapper .navbar .navbar-nav .nav-item .nav-link .hide-title {
+        display: none;
+    }
+
+    .vision .content-wrapper .vision-content .vision-content-main iframe {
+        width: 90%;
+        height: 20rem;
+    }
+}
+
+/* Max-width: 520px 테블릿 이하 시작 부분 */
+@media (max-width: 520px) {
+    .vision .nav-wrapper .navbar .navbar-nav .nav-item .nav-link {
+        padding: 0.7rem 0.3rem;
+    }
+
+    .vision .nav-wrapper .navbar .navbar-login .view-logout {
+        display: block;
+    }
+
+    .vision .nav-wrapper .navbar .navbar-login .hide-logout {
+        display: none;
+    }
+
+    .vision .content-wrapper .vision-content .vision-content-main table.infobox,
+    .vision .content-wrapper .vision-content .vision-content-main table.wikitable {
+        float: none !important;
+        width: 100% !important;
+        margin: auto !important;
+    }
+
+    .vision .content-wrapper .vision-content .vision-content-main iframe {
+        width: 100%;
+        height: 15rem;
+    }
+	
+	#searchform {
+		width:100%;
+	}
+}
+
+/* Max-width: 397px 대형폰 이하 시작 부분 */
+@media (max-width: 397px) {
+    .vision .nav-wrapper .navbar .navbar-brand {
+        width: auto;
+    }
+
+    .vision .nav-wrapper .navbar .navbar-nav .nav-item .nav-link {
+        padding: 0.7rem 0.2rem;
+    }
+
+    .vision .nav-wrapper .navbar .navbar-login {
+        padding-left: 0.4rem;
+    }
+
+    .vision .nav-wrapper .navbar .navbar-notification {
+        padding-left: 0.4rem;
+    }
+
+    .vision .nav-wrapper .navbar .form-inline {
+        padding-top: 0.04rem;
+    }
+}
+

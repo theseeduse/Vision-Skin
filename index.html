@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="{{'language_tag'|load_lang}}">
+    <head>
+        <style id="ringo_add_style"></style>
+        <script defer src="/views/vision/js/skin_set_do.js.cache_v1"></script>
+        <meta charset="utf-8">
+        {% if imp[3][0] != 0 %}
+            <title>{{imp[0]}} {{imp[3][0]}} - {{imp[1][0]}}</title>
+        {% else %}
+            <title>{{imp[0]}} - {{imp[1][0]}}</title>
+        {% endif %}
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0-alpha.2/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.3/themes/base/jquery-ui.min.css" integrity="sha512-8PjjnSP8Bw/WNPxF6wkklW6qlQJdWJc/3w/ZQPvZ/1bjVDkrrSqLe9mfPYrMxtnzsXFPc434+u4FHLnLjXTSsg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="/views/vision/css/default.css.cache_v5">
+        <link rel="stylesheet" href="/views/vision/css/default_mobile.css.cache_v2">
+        {{imp[3][3]|safe}}
+        <link rel="stylesheet" href="/views/vision/css/style.css.cache_v12">
+        <link rel="stylesheet" href="/views/vision/css/more.css.cache_v4">
+        {% if request.cookies.get('main_css_darkmode', '') == '1' %}
+            {{imp[3][5]|safe}}
+            <link rel="stylesheet" href="/views/vision/css/dark.css.cache_v6">
+        {% endif %}
+        <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+        <link rel="shortcut icon" href="/image/favicon.ico">
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.4.1/jquery-migrate.min.js" integrity="sha512-t0ovA8ZOiDuaNN5DaQQpMn37SqIwp6avyoFQoW49hOmEYSRf8mTCY2jZkEVizDT+IZ9x+VHTZPpcaMA5t2d2zQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.3/jquery-ui.min.js" integrity="sha512-Ww1y9OuQ2kehgVWSD/3nhgfrb424O3802QYP/A5gPXoM4+rRjiKrjHdGxQKrMGQykmsJ/86oGdHszfcVgUr4hA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+        <script defer src="/views/vision/js/layout.js.cache_v3"></script>
+        <script defer src="/views/vision/js/skin_set.js.cache_v6"></script>
+        {{imp[1][5]|safe}}
+        {{imp[2][3]|safe}}
+        {% if imp[3][0] != 0 %}
+            <meta name="title" content="{{imp[0]}}{{imp[3][0]}} - {{imp[1][0]}}">
+        {% else %}
+            <meta name="title" content="{{imp[0]}} - {{imp[1][0]}}">
+        {% endif %}
+        <meta name="keywords" content="{{imp[0]}}">
+        <meta name="description" content="{{imp[3][6]}}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
+        <meta content="yes" name="apple-mobile-web-app-capable" />  
+        <meta content="minimum-scale=1.0, width=device-width, maximum-scale=1, user-scalable=no" name="viewport" />
+        <meta property="og:type" content="website">
+        <meta name="theme-color" content="#696FFF">
+    </head>
+    <body class="vision">
+        <div class="nav-wrapper">
+            <nav class="navbar navbar-dark">
+                <a class="navbar-brand" href="/">{{imp[1][4]|safe}}</a>
+                <ul class="nav navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/recent_changes"><span class="fa fa-solid fa-compass"></span><span class="hide-title">{{'recent_change'|load_lang}}</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/recent_discuss/1/open"><span class="fa fa-solid fa-comment-dots"></span><span class="hide-title">{{'recent_discussion'|load_lang}}</span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle dropdown-toggle-fix" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="fa fa-cogs"></span><span class="hide-title">{{'other_tool'|load_lang}}</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right nav-dropdown-menu" role="menu">
+                            <a class="dropdown-item" href="/bbs/main"><span class="fa fa-file-text"></span><span class="hide-title">{{'bbs_main'|load_lang}}</span></a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="/vote"><i class="fa fa-solid fa-check-to-slot"></i><span class="hide-title">{{'vote'|load_lang}}</span></a>
+                            <a class="dropdown-item" href="/upload"><span class="fa fa-upload"></span><span class="hide-title">{{'upload'|load_lang}}</span></a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="/list/document/all"><span class="fa fa-folder-open"></span><span class="hide-title">{{'all_document_list'|load_lang}}</span></a>
+                            <a class="dropdown-item" href="/list/document/acl"><span class="fa fa-solid fa-shop-lock"></span><span class="hide-title">{{'acl_document_list'|load_lang}}</span></a>
+                            <a class="dropdown-item" href="/list/document/need"><span class="fa fa-chain-broken"></span><span class="hide-title">{{'need_document'|load_lang}}</span></a>
+                            <a class="dropdown-item" href="/list/document/long"><i class="fa fa-solid fa-anchor-circle-check"></i><span class="hide-title">{{'long_page'|load_lang}}</span></a>
+                            <a class="dropdown-item" href="/list/document/short"><i class="fa fa-solid fa-seedling"></i><span class="hide-title">{{'short_page'|load_lang}}</span></a>
+                            <a class="dropdown-item" href="/list/document/old"><span class="fa fa-solid fa-business-time"></span><span class="hide-title">{{'old_page'|load_lang}}</span></a>
+                            <a class="dropdown-item" href="/list/file"><i class="fa fa-solid fa-images"></i><span class="hide-title">{{'image_file_list'|load_lang}}</span></a>
+                            <a class="dropdown-item" href="/list/admin/auth_use"><span class="fa fa-solid fa-list-check"></span><span class="hide-title">{{'authority_use_list'|load_lang}}</span></a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="/other"><span class="fa fa-cogs"></span><span class="hide-title">{{'other_tool'|load_lang}}</span></a>
+                            {% if imp[2][9] != '0' %}
+                                <a class="dropdown-item" href="/manager"><span class="fa fa-sliders"></span><span class="hide-title">{{'admin_tool'|load_lang}}</span></a>
+                            {% endif %}
+                        </div>
+                    </li>
+                    {% if imp[1][6] != '' %}
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle dropdown-toggle-fix" href="#" data-toggle="dropdown" aria-expanded="false">
+                                <span class="fa fa-plus-circle"></span><span class="hide-title">{{'added_menu'|load_lang}}</span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right nav-dropdown-menu" role="menu">
+                                {% for added_top_menu in imp[1][6] %}
+                                    <a class="dropdown-item" href="{{added_top_menu[1]}}">
+                                        <i class="fa fa-solid fa-link"></i>
+                                        <span class="hide-title">{{added_top_menu[0]}}</span>
+                                    </a>
+                                {% endfor %}
+                            </div>
+                        </li>
+                    {% endif %}
+                </ul>
+                <div class="navbar-login">
+                    <div class="dropdown login-menu">
+                        <a class="dropdown-toggle" type="button" id="login-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            {% if imp[2][2] == 0 %}
+                            <span class="fa fa-user-large"></span>
+                            {% elif imp[2][4] != '' %}
+                                <img class="profile-img" src="https://secure.gravatar.com/avatar/{{imp[2][4]|md5_replace}}?d=retro">
+                            {% else %}
+                                <img class="profile-img" src="https://secure.gravatar.com/avatar/00000000000000000000000000000000?d=retro&f=y">
+                            {% endif %}
+                        </a>
+                        <div aria-labelledby="login-menu" class="dropdown-menu dropdown-menu-right login-dropdown-menu">
+                            <div class="login-dropdown-name">
+                                <div class="login-dropdown-name1">
+                                    {{imp[2][10]}}
+                                </div>
+                                <div class="login-dropdown-name2">
+                                    {% if imp[2][2] == 1 %}
+                                        {% if imp[2][6] == '1' %}
+                                            {% if 'owner' in imp[2][9] %}
+                                                Owner
+                                            {% else %}
+                                                Admin
+                                            {% endif %}
+                                        {% else %}
+                                            Member
+                                        {% endif %}
+                                    {% else %}
+                                        IP User
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="/change/skin_set"><span class="hide-title">{{'skin_set'|load_lang}}</span></a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="/user"><span class="hide-title">{{'user_tool'|load_lang}}</span></a>
+                            <a class="dropdown-item" href="/change"><span class="hide-title">{{'user_setting'|load_lang}}</span></a>
+                            {% if imp[2][2] == 1 %}
+                                <a class="dropdown-item" href="/w/user:{{imp[2][10]}}"><span class="hide-title">{{'user_document'|load_lang}}</span></a>
+                            {% endif %}
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="/record/{{imp[2][10]}}"><span class="hide-title">{{'edit_record'|load_lang}}</span></a>
+                            <a class="dropdown-item" href="/record/topic/{{imp[2][10]}}"><span class="hide-title">{{'discussion_record'|load_lang}}</span></a>
+                            {% if imp[2][2] == 1 %}
+                                <a class="dropdown-item" href="/watch_list"><span class="hide-title">{{'watchlist'|load_lang}}</span></a>
+                                <a class="dropdown-item" href="/star_doc"><span class="hide-title">{{'star_doc'|load_lang}}</span></a>
+                            {% endif %}
+                            <div class="dropdown-divider"></div>
+							{% if imp[2][2] == 1 %}
+                                <a class="dropdown-item" href="/logout"><span class="hide-title">{{'logout'|load_lang}}</span></a>
+                            {% else %}
+                            <a class="dropdown-item" href="/login"><span class="hide-title">{{'login'|load_lang}}</span></a>
+                            <a class="dropdown-item" href="/register"><span class="hide-title">{{'register'|load_lang}}</span></a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                <div class="navbar-alarm">
+                    {% if imp[2][8] != '0' %}
+                        <a class="navbar-alarm-item" id="navbar-alarm-color" href="/alarm">
+                            <i class="fa fa-solid fa-bell"></i><br>
+                        </a>
+                    {% else %}
+                        <a class="navbar-alarm-item" href="/alarm">
+                            <i class="fa fa-solid fa-bell"></i><br>
+                        </a>
+                    {% endif %}
+                </div>
+                <form method="post" action="/search" id="searchform" class="form-inline">
+                    <div class="input-group">
+                        <a class="btn btn-secondary" id="navbar-random" href="/random"><i class="fa fa-random"></i></a>
+                        <input type="search" name="search" placeholder="검색하려면 여기에 입력하세요." accesskey="f" class="form-control" id="searchInput" autocomplete="off">
+                        <span class="input-group-btn">
+                            <button formaction="/goto" name="go" value="view" id="searchGoButton" class="btn btn-secondary"><span class="fa fa-solid fa-magnifying-glass"></span></button>
+                            <button name="fulltext" value="search" id="searchSearchButton" class="btn btn-secondary"><span class="fa fa-arrow-right"></span></button>
+                        </span>
+                    </div>
+                </form>
+            </nav>
+        </div>
+        {% if imp[1][7][0] != '' %}
+            <div class="vision-top-notice-bg">
+                <div class="vision-top-notice">
+                    {{imp[1][7][0]|safe}}
+                </div>
+            </div>
+        {% endif %}
+        <div class="menu-buttons">
+            <a class="scroll-menu" href="#sidebar"><i class="fa fa-solid fa-bars"></i></a>
+        </div>
+        <div class="scroll-buttons">
+            <a class="scroll-toc" href="#toc" id="scroll-button-toc"><i class="fa fa-list-ul" aria-hidden="true"></i></a><!--
+            --><a class="scroll-button" href="#" id="scroll-button-left"><i class="fa fa-angle-up" aria-hidden="true"></i></a><!--
+            --><a class="scroll-bottom" href="#powered" id="scroll-button-right"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+        </div>
+        <div class="content-wrapper">
+            <div class="container-fluid vision-content">
+                <div class="vision-content-header">
+                    {% if not menu == 0 %}
+                        <div class="content-tools">
+                            <div class="btn-group" role="group" aria-label="content-tools">
+                                {% for sub_d in menu %}
+                                    {% if loop.index > 3 %}
+                                        {% if loop.index == 4 %}
+                                            <button type="button" class="btn btn-secondary tools-btn tool-more-btn" data-toggle="dropdown" aria-expanded="false">
+                                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                                            </button>
+                                            <div class="dropdown-menu dropdown-menu-right" role="menu">
+                                            {% set i = 0 %}
+                                        {% endif %}
+                                        {% if sub_d|length > 2 and sub_d[2] == 1 %}
+                                            <a class="dropdown-item" href="/{{sub_d[0]}}" id="topic_color"><i class="fa fa-solid fa-square-pen"></i> {{sub_d[1]}}</a>
+                                        {% else %}
+                                            <a class="dropdown-item" href="/{{sub_d[0]}}">{{sub_d[1]}}</a>
+                                        {% endif %}
+                                    {% else %}
+                                        {% if sub_d|length > 2 and sub_d[2] == 1 %}
+                                        <a class="btn btn-secondary tools-btn" href="/{{sub_d[0]}}" id="topic_color"><i class="fa fa-solid fa-square-pen"></i> {{sub_d[1]}}</a>
+                                        {% else %}
+                                            <a class="btn btn-secondary tools-btn" href="/{{sub_d[0]}}">{{sub_d[1]}}</a>
+                                        {% endif %}
+                                    {% endif %}
+                                    {% if not menu[loop.index] and loop.index > 3 %}
+                                        </div>
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                    {% endif %}
+                    <div class="title">
+                        <h1 id="main_title">
+                                <a class="main_title_a" href="/w/{{imp[0]}}">{{imp[0]}}</a>
+                            {% if imp[3][0] != 0 %}
+                                <sub>{{imp[3][0]}}</sub>
+                            {% endif %}
+                        </h1>
+                        {% if imp[3][1] != 0 %}
+                            <div class="last-edit">
+                                {{'last_edit_time'|load_lang}}: {{imp[3][1]}}
+                            </div>
+                            <div class="page-view">
+                                {{'page_view'|load_lang}}: {{imp[3][7]}}
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="vision-content-main wiki-article">
+                    {{data|safe}}
+                </div>
+            </div>
+            <div class="vision-sidebar" id="sidebar">
+                <div class="sidebar-0">
+                    <a class="sidebar-0-title" href="/user"><i class="fa fa-user-large"></i> {{'user'|load_lang}} <i class="sidebar-angle fa-solid fa-angle-right"></i></a>
+                    <div class="sidebar-0-account">
+                        <div class="sidebar-0-profile">
+                            {% if imp[2][2] == 0 %}
+                            <i class="fa fa-solid fa-circle-user"></i>
+                            {% elif imp[2][4] != '' %}
+                                <img class="profile-img" src="https://secure.gravatar.com/avatar/{{imp[2][4]|md5_replace}}?d=retro">
+                            {% else %}
+                                <img class="profile-img" src="https://secure.gravatar.com/avatar/00000000000000000000000000000000?d=retro&f=y">
+                            {% endif %}
+                        </div>
+                        <div class="sidebar-0-name">
+                            <div id="sidebar-0-name1">{{imp[2][10]}}</div>
+                            <div id="sidebar-0-name2">
+                                {% if imp[2][2] == 1 %}
+                                    {% if imp[2][6] == '1' %}
+                                        {% if 'owner' in imp[2][9] %}
+                                            Owner
+                                        {% else %}
+                                            Admin
+                                        {% endif %}
+                                    {% else %}
+                                        Member
+                                    {% endif %}
+                                {% else %}
+                                    IP User
+                                {% endif %}
+                            </div>
+                            <div id="sidebar-0-name3">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sidebar-0-tool">
+                        {% if imp[2][8] != '0' %}
+                            <a class="sidebar-0-item" id="navbar-alarm-color" href="/alarm">
+                                <i class="sidebar-angle fa-solid fa-bell"></i>
+                                <span class="sidebar-0-item-sub">
+                                    {{imp[2][8]}}
+                                </span> 
+                        {% else %}
+                            <a class="sidebar-0-item" href="/alarm">
+                                <i class="fa fa-solid fa-bell"></i> {{'alarm'|load_lang}}
+                            </a>
+                        {% endif %}
+                        <a class="sidebar-0-item" href="/change/skin_set">
+                            <i class="fa fa-solid fa-gears"></i> {{'skin_set'|load_lang}}
+                        </a>
+                        <a class="sidebar-0-item" href="/change">
+                            <i class="fa fa-solid fa-pen-to-square"></i> {{'user_setting'|load_lang}}
+                        </a>
+                        <a class="sidebar-0-item" href="/star_doc">
+                            <i class="fa fa-solid fa-heart"></i> {{'star_doc'|load_lang}}
+                        </a>
+                        <a class="sidebar-0-item" href="/watch_list">
+                            <i class="fa fa-solid fa-eye"></i> {{'watchlist'|load_lang}}
+                        </a>
+                    </div>
+                </div>
+                <div class="sidebar-1">
+                    <a class="sidebar-1-title" href="/recent_changes"><i class="fa fa-solid fa-compass"></i> {{'recent_change'|load_lang}} <i class="sidebar-angle fa-solid fa-angle-right"></i></a>
+                    <ul class="sidebar-1-list" id="sidebar-1-list">
+                        <li><span id="sidebar-1-item">[불러오는 중...]</span></li>
+                </div>
+                <div class="sidebar-2">
+                    <a class="sidebar-2-title" href="/recent_discuss"><i class="fa fa-solid fa-comment-dots"></i> {{'recent_discussion'|load_lang}} <i class="sidebar-angle fa-solid fa-angle-right"></i></a>
+                    <ul class="sidebar-2-list" id="sidebar-2-list">
+                        <li><span id="sidebar-2-item">[불러오는 중...]</span></li>
+                    </ul>
+                </div>
+                <div class="sidebar-3">
+                    <a class="sidebar-3-title" href="/bbs/main"><i class="fa fa-file-text"></i> 최근 게시글 <i class="sidebar-angle fa-solid fa-angle-right"></i></a>
+                    <ul class="sidebar-3-list" id="sidebar-3-list">
+                        <li><span id="sidebar-3-item">[불러오는 중...]</span></li>
+                    </ul>
+                </div>
+                <div class="sidebar-4">
+                    <a class="sidebar-4-title" href="https://2du.pythonanywhere.com/w/오픈나무%20공용"><i class="fa fa-solid fa-walkie-talkie"></i> 연합 {{'recent_change'|load_lang}} <i class="sidebar-angle fa-solid fa-angle-right"></i></a>
+                    <ul class="sidebar-4-list" id="sidebar-4-list">
+                        <li><span id="sidebar-4-item">[불러오는 중...]</span></li>
+                    </ul>
+                </div>
+                <div class="sidebar-5">
+                    {{imp[1][7][1]|safe}}
+                </div>
+            </div>
+        </div>
+        <div class="vision-footer" id="bottom">
+            <p class="footer-p">
+                {{imp[1][1]|safe}}
+            </p>
+            <div class="footer-p" id="powered">
+                Powered by <a href="https://github.com/openNAMU/openNAMU">openNAMU</a>, Designed by <a href="https://github.com/daol-project/Vision-skin">Vision</a>.
+            </div>
+            <p class="footer-p">
+                {{imp[1][7][2]|safe}}
+            </p>
+        </div>
+    </body>
+</html>

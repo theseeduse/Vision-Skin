@@ -1,0 +1,32 @@
+:root {
+    --main-color: #2d2f34;
+    --sub-color: #383b40;
+    --menu-button-color: #777;
+    --border-color: #555;
+    --sub-border-color: #444;
+    --body-color: black;
+    --text-color: #E0E0E0;
+    --text-color-1: #ddd;
+    --text-color-2: #bbb;
+    --a-color: #A7C8FF;
+    --nav-color: #ddd;
+    --bg-color-0: #1c1d1f;
+    --bg-color-1: #111;
+    --bg-color-2: #272727;
+    --bg-color-3: #393939;
+    --button-bg-color: #000;
+    --link-color: #0b0;
+    --topic-color: #325a56;
+}
+
+.opennamu_main textarea, .opennamu_main input, .opennamu_main select {
+    background: var(--bg-color-0);
+}
+
+.opennamu_main button {
+    background: var(--menu-button-color);
+}
+
+html, body {
+    color: var(--text-color);
+}
