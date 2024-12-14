@@ -1,7 +1,7 @@
 :root {
     --main-color: #4188f1;
     --menu-button-color: #4188f1;
-    --sub-color: #5997f3;
+    --sub-color: #5997f3; /* TODO: sub-color 해서 그라데이션 적용해보기? */
     --light-sub-color: #8db7f6;
     --border-color: #e1e8ed; /* 여기서 부터는 수정 안 해도 됩니다. */
     --sub-border-color: #ccc;
