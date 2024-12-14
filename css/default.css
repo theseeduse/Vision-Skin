@@ -208,7 +208,8 @@ del, s, strike {
 /* 네비 수정 */
 .vision .nav-wrapper {
     min-height: 2.8rem;
-    background: linear-gradient(var(--main-color), var(--sub-color));
+    background-color: var(--main-color);
+    /* background: linear-gradient(var(--main-color), var(--sub-color)); */
     z-index: 1001;
 }
 
